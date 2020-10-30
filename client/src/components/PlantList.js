@@ -7,10 +7,8 @@ export default class PlantList extends Component {
   }
 
   componentDidMount() {
-    console.log('mounting')
     axios.get('http://localhost:3333/plants')
       .then(res => {
-        console.log(res)
         this.setState({ plants: res.data.plantsData })
       })
     .catch(err => console.log(err))
@@ -18,7 +16,6 @@ export default class PlantList extends Component {
 
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
   render() {
-    console.log(this.state.plants)
     return (
       <main className="plant-list">
         {this.state?.plants?.map((plant) => (
