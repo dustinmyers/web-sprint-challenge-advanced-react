@@ -1,6 +1,6 @@
 import React from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
-import CheckoutForm from "./CheckoutForm";
+import CheckoutForm from "./components/CheckoutForm";
 
 test("form submits correctly", async () => {
   render(<CheckoutForm />);
